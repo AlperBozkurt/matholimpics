@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -39,11 +39,21 @@ export class HomeComponent implements OnInit  {
   scroll(el: HTMLElement) {
     el.scrollIntoView();
   }
-  constructor(   private formBuilder: FormBuilder,  private router: Router, private reactiveFormsModule:ReactiveFormsModule, private seo: SeoService ){
-    this.seo.setTitle('Olimpiyat Dershanesi')
-    this.seo.setMeta('Olimpiyat Dershanesi')
+  constructor(   private formBuilder: FormBuilder,  private router: Router, private reactiveFormsModule:ReactiveFormsModule, private seo: SeoService,private elementRef: ElementRef ){
+    this.seo.setTitle('Zeka Koleji')
+    this.seo.setMeta('Zeka Koleji')
 
    }
+
+   scrollToDivContact() {
+    const divContact = this.elementRef.nativeElement.querySelector('#idDivContact');
+    if (divContact) {
+      divContact.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+
+
 
   ngOnInit(): void {
   }

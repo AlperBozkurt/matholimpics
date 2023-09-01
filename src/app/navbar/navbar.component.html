@@ -1,21 +1,27 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">(O101) Olimpiyat Dershanesi</a>
+      <a class="navbar-brand" href="#">Zeka Koleji</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/staff']" routerLinkActive="active">Kadromuz</a>
+            <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active">Hakkımızda</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/courses']" routerLinkActive="active">Kurslar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/examMaker']" routerLinkActive="active">Sınav Hazırla</a>
+            <a class="nav-link" [routerLink]="['/exams']" routerLinkActive="active">Yarışmalar</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active">İletişim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/blog']" routerLinkActive="active">Blog</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Daha Fazla
             </a>
@@ -28,12 +34,13 @@
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Çıkış</a>
-          </li>
+          </li>-->
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Giriş" aria-label="Giriş">
           
           <button class="btn btn-outline-success" type="submit">Giriş</button>
+          
         </form>
       </div>
     </div>

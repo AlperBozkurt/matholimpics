@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ExamMakerComponent } from './exam-maker/exam-maker.component';
 import { ImageCropperModule } from 'ngx-image-cropper';
+import { AboutComponent } from './about/about.component';
+import { ExamsComponent } from './exams/exams.component';
+import { ContactComponent } from './contact/contact.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { ImageCropperModule } from 'ngx-image-cropper';
     CoursesComponent,
     StaffComponent,
     ErrorPageComponent,
-    ExamMakerComponent
+    ExamMakerComponent,
+    AboutComponent,
+    ExamsComponent,
+    ContactComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
