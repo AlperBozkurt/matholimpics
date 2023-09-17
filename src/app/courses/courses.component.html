@@ -1,33 +1,19 @@
-<h1>Kurslarımız</h1>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">İlkokul Kursları</h2>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Matematik Yarışmalarına Hazırlık</li>
-                        <li class="list-group-item">Zeka Oyunları</li>
-                        <li class="list-group-item">Kriptoloji</li>
-                        <li class="list-group-item">Özel Okul Sınavlarına Hazırlık</li>
-                        <li class="list-group-item">Kodlama</li>
-                    </ul>
-                </div>
-            </div>
+
+  <div class="accordion" id="listeAccordion">
+    <div *ngFor="let madde of kursListesi; let i = index" class="accordion-item">
+      <h2 class="accordion-header" id="heading{{ i }}">
+        <button class="accordion-button text-black" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" aria-expanded="true" [attr.aria-controls]="'collapse' + i" style="background-color: #eaeaea;">
+          {{ madde.baslik }}
+        </button>
+      </h2>
+      <div [id]="'collapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading' + i" data-bs-parent="#listeAccordion">
+        <div class="accordion-body">
+            <p><strong>Açıklama:</strong> {{ madde.aciklama }}</p>
+            <p><strong>Hazırlık:</strong></p>
+            <ul>
+                <li *ngFor="let yarisma of madde.yarismaHazirlik">{{ yarisma }}</li>
+            </ul>
         </div>
-        <div class="col-md-6">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">Ortaokul Kursları</h2>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Matematik Olimpiyatlarına Hazırlık</li>
-                        <li class="list-group-item">Bilgisayar Olimpiyatlarına Hazırlık</li>
-                        <li class="list-group-item">Zeka Oyunları</li>
-                        <li class="list-group-item">Kriptoloji</li>
-                        <li class="list-group-item">LGS Hazırlık ve Okula Destek</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
   </div>
